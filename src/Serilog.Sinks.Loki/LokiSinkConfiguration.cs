@@ -1,4 +1,5 @@
 using System;
+using Serilog.Formatting;
 using Serilog.Sinks.Http;
 using Serilog.Sinks.Loki.Labels;
 
@@ -15,5 +16,6 @@ namespace Serilog.Sinks.Loki
         public IHttpClient HttpClient { get; set; }
         public string OutputTemplate { get; set; } = DefaultTemplate;
         public IFormatProvider FormatProvider { get; set; }
+        public ITextFormatter TextFormatter { get; set; }
     }
 }
